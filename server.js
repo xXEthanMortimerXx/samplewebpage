@@ -8,9 +8,7 @@ const app = express();
 
 // our default array of dreams
 const dreams = [
-  "Find and count some sheep",
-  "Climb a really tall mountain",
-  "Wash the dishes"
+  "Kanye West is my inspiration for this project"
 ];
 
 // make all the files in 'public' available
@@ -19,17 +17,20 @@ app.use(express.static("public"));
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.get("/", (request, response) => {
-  response.sendFile(__dirname + "/views/index.html");
+  response.sendFile(__dirname + "/views/");
 });
 app.get("/aboutme", (request, response) => {
   response.sendFile(__dirname + "/views/aboutme.html");
 });
-// send the default array of dreams to the webpage
-app.get("/dreams", (request, response) => {
-  // express helps us take JS objects and send them as JSON
-  response.json(dreams);
+app.get("/unitwork", (request, response) => {
+  response.sendFile(__dirname + "/views/unitwork.html");
 });
-
+app.get("/projects", (request, response) => {
+  response.sendFile(__dirname + "/views/projects.html");
+});
+app.get("/actuallyaboutme", (request, response) => {
+  response.sendFile(__dirname + "/views/actuallyaboutme.html");
+});
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
   console.log("Your app is listening on port " + listener.address().port);

@@ -8,6 +8,7 @@ body {
   font-family: sans-serif;
   margin: 2em 1em;
   line-height: 1.5em;
+  color: #373fff;
 }
 
 h1 {
@@ -15,6 +16,7 @@ h1 {
   color: #373fff;
   max-width: calc(100% - 5rem);
   line-height: 1.1;
+  font-family: arial;
 }
 
 form {
